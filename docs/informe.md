@@ -27,3 +27,14 @@ El metodo `renderTemplate` no usaba estado de instancia y no estaba declarado co
 
 **Solucion:**
 Se declaro `renderTemplate` como `static` para reflejar que no depende del estado del objeto.
+
+## Regla 1 - Violacion 3
+
+**Archivo:**
+JavaMailEmailSenderAdapter.java
+
+**Problema:**
+Se uso el nombre completamente calificado `javax.mail.internet.InternetAddress` aunque ya estaba importado.
+
+**Solucion:**
+Se uso el import existente `InternetAddress` para mantener el estilo consistente.
