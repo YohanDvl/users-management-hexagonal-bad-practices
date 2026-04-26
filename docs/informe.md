@@ -60,3 +60,25 @@ Se usaba el valor magico `8` para la longitud minima de la contraseña.
 
 **Solucion:**
 Se creo la constante `MIN_PASSWORD_LENGTH` y se uso en la validacion.
+
+## Regla 1 - Violacion 6
+
+**Archivo:**
+UserPassword.java
+
+**Problema:**
+Se hacia validacion de null con comparacion directa en vez de usar utilidades estandar.
+
+**Solucion:**
+Se reemplazo el chequeo por `Objects.requireNonNull(...)`.
+
+## Regla 2 - Violacion 2
+
+**Archivo:**
+UserPassword.java
+
+**Problema:**
+Se usaban valores magicos para longitud minima y costo de BCrypt.
+
+**Solucion:**
+Se definieron las constantes `MINIMUM_LENGTH` y `BCRYPT_COST` y se usaron en el calculo.
