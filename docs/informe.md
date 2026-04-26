@@ -38,3 +38,14 @@ Se uso el nombre completamente calificado `javax.mail.internet.InternetAddress` 
 
 **Solucion:**
 Se uso el import existente `InternetAddress` para mantener el estilo consistente.
+
+## Regla 1 - Violacion 4
+
+**Archivo:**
+JavaMailEmailSenderAdapter.java
+
+**Problema:**
+Se uso un import con comodin `javax.mail.*`, ocultando dependencias reales.
+
+**Solucion:**
+Se reemplazo el comodin por imports explicitos de las clases usadas.
