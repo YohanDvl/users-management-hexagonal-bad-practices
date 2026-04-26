@@ -32,6 +32,8 @@ import com.jcaa.usersmanagement.domain.enums.UserRole;
  */
 public class UserValidationUtils {
 
+  private static final int MIN_PASSWORD_LENGTH = 8;
+
   // Clean Code - Regla 13: la validación de si un usuario puede hacer login
   // debería vivir en UserModel.isAllowedToLogin() o en un servicio de dominio.
   public static boolean isUserActive(final UserModel user) {
@@ -59,7 +61,7 @@ public class UserValidationUtils {
   // Clean Code - Regla 18 (magic numbers): el número 8 es un magic number aquí —
   // ya tiene significado en UserPassword pero se repite sin constante.
   public static boolean isValidPassword(final String password) {
-    return password != null && password.length() >= 8;
+    return password != null && password.length() >= MIN_PASSWORD_LENGTH;
   }
 
   // Clean Code - Regla 20 (objeto antes que primitivo cuando el concepto lo merezca):

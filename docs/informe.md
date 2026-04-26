@@ -49,3 +49,14 @@ Se uso un import con comodin `javax.mail.*`, ocultando dependencias reales.
 
 **Solucion:**
 Se reemplazo el comodin por imports explicitos de las clases usadas.
+
+## Regla 2 - Violacion 1
+
+**Archivo:**
+UserValidationUtils.java
+
+**Problema:**
+Se usaba el valor magico `8` para la longitud minima de la contraseña.
+
+**Solucion:**
+Se creo la constante `MIN_PASSWORD_LENGTH` y se uso en la validacion.
