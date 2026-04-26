@@ -82,3 +82,25 @@ Se usaban valores magicos para longitud minima y costo de BCrypt.
 
 **Solucion:**
 Se definieron las constantes `MINIMUM_LENGTH` y `BCRYPT_COST` y se usaron en el calculo.
+
+## Regla 1 - Violacion 7
+
+**Archivo:**
+UserName.java
+
+**Problema:**
+Se validaba null con comparacion directa en lugar de `Objects.requireNonNull`.
+
+**Solucion:**
+Se reemplazo el chequeo por `Objects.requireNonNull(...)`.
+
+## Regla 2 - Violacion 3
+
+**Archivo:**
+UserName.java
+
+**Problema:**
+Se usaba el valor magico `3` para longitud minima del nombre.
+
+**Solucion:**
+Se creo la constante `MINIMUM_LENGTH` y se uso en la validacion.
