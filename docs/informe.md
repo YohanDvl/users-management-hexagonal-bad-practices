@@ -16,3 +16,14 @@ El caso de uso devolvia `null` cuando no existian usuarios, lo que viola la regl
 
 **Solucion:**
 El caso de uso ahora devuelve una lista vacia cuando no hay resultados, manteniendo el contrato sin `null`.
+
+## Regla 1 - Violacion 2
+
+**Archivo:**
+EmailNotificationService.java
+
+**Problema:**
+El metodo `renderTemplate` no usaba estado de instancia y no estaba declarado como `static`.
+
+**Solucion:**
+Se declaro `renderTemplate` como `static` para reflejar que no depende del estado del objeto.
