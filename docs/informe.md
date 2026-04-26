@@ -1,3 +1,14 @@
+## Regla 1 - Violación 1
+
+**Archivo:**
+UserRepositoryMySQL.java
+
+**Problema:**
+Se usaba un import con comodín (`java.util.*`), lo que oculta dependencias reales y viola la regla de imports explícitos.
+
+**Solución:**
+Se reemplazó el import comodín por imports específicos (`List` y `Optional`).
+
 ## Regla 1 - Violacion 5
 
 **Problema:**
