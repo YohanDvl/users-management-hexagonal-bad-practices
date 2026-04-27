@@ -15,19 +15,16 @@ public final class UserResponsePrinter {
 
   public void print(final UserResponse response) {
     console.println(SEPARATOR);
-    console.printf(ROW_FORMAT, "ID",     response.getId());
-    console.printf(ROW_FORMAT, "Name",   response.getName());
-    console.printf(ROW_FORMAT, "Email",  response.getEmail());
-    console.printf(ROW_FORMAT, "Role",   response.getRole());
+    console.printf(ROW_FORMAT, "ID", response.id());
+    console.printf(ROW_FORMAT, "Name", response.name());
+    console.printf(ROW_FORMAT, "Email", response.email());
+    console.printf(ROW_FORMAT, "Role", response.role());
     // Clean Code - Regla 16: se llama al auxiliar que tiene la cadena if/else larga
-    console.printf(ROW_FORMAT, "Status", getStatusLabel(response.getStatus()));
+    console.printf(ROW_FORMAT, "Status", getStatusLabel(response.status()));
     console.println(SEPARATOR);
   }
 
   public void printList(final List<UserResponse> users) {
-    // VIOLACIÓN Regla 5: si GetAllUsersService retorna null (lista vacía → null),
-    // esta llamada a users.isEmpty() lanza NullPointerException en tiempo de ejecución.
-    // Ningún método debe retornar null — se deben usar colecciones vacías.
     if (users.isEmpty()) {
       console.println("  No users found.");
       return;
@@ -47,7 +44,7 @@ public final class UserResponsePrinter {
         .map(list -> list.stream()
             .reduce(
                 new StringBuilder(),
-                (sb, u) -> sb.append(String.format("  %s (%s)%n", u.getName(), getStatusLabel(u.getStatus()))),
+          (sb, u) -> sb.append(String.format("  %s (%s)%n", u.name(), getStatusLabel(u.status()))),
                 StringBuilder::append))
         .map(StringBuilder::toString)
         .ifPresentOrElse(console::println, () -> console.println("  No users found."));

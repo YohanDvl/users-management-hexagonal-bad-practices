@@ -478,3 +478,14 @@ Faltaba javadoc de clase.
 
 **Solucion:**
 Se agrego javadoc descriptivo.
+
+## Regla 2 - Violacion 7
+
+**Archivo:**
+UserResponse.java
+
+**Problema:**
+Se usaba una clase mutable con @Data en lugar de un record inmutable.
+
+**Solucion:**
+Se convirtio el DTO a record.
