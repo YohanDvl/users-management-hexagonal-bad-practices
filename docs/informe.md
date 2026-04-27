@@ -247,3 +247,25 @@ Faltaban `@DisplayName`, comentarios AAA y se usaban aserciones poco expresivas.
 
 **Solucion:**
 Se agregaron `@DisplayName`, comentarios `// Arrange`, `// Act`, `// Assert` y se usaron aserciones correctas.
+
+## Regla 1 - Violacion 18
+
+**Archivo:**
+UserPasswordTest.java
+
+**Problema:**
+Faltaban `@DisplayName`, comentarios AAA y se usaban aserciones poco expresivas.
+
+**Solucion:**
+Se agregaron `@DisplayName`, comentarios `// Arrange`, `// Act`, `// Assert` y se usaron aserciones correctas.
+
+## Regla 1 - Violacion 19
+
+**Archivo:**
+UpdateUserServiceTest.java
+
+**Problema:**
+Faltaban comentarios AAA, @DisplayName y se usaban aserciones poco expresivas.
+
+**Solucion:**
+Se agregaron comentarios `// Arrange`, `// Act`, `// Assert`, `@DisplayName` y se usaron aserciones correctas.
