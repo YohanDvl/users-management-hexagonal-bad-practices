@@ -137,3 +137,14 @@ Los mensajes de error estaban hardcodeados en el metodo.
 
 **Solucion:**
 Se definieron constantes con nombres descriptivos para los mensajes.
+
+## Regla 2 - Violacion 5
+
+**Archivo:**
+LoginServiceTest.java
+
+**Problema:**
+Faltaban `@DisplayName`, comentarios AAA y se usaban aserciones poco expresivas.
+
+**Solucion:**
+Se agregaron `@DisplayName`, comentarios `// Arrange`, `// Act`, `// Assert` y se usaron aserciones correctas.
