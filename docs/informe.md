@@ -489,3 +489,179 @@ Se usaba una clase mutable con @Data en lugar de un record inmutable.
 
 **Solucion:**
 Se convirtio el DTO a record.
+
+## Regla 2 - Violacion 8
+
+**Archivo:**
+DeleteUserService.java
+
+**Problema:**
+Se usaba un logger manual y un try-catch que capturaba excepciones no recuperables.
+
+**Solucion:**
+Se removio el logger manual y el try-catch para dejar propagar las excepciones.
+
+## Regla 2 - Violacion 9
+
+**Archivo:**
+CreateUserHandler.java
+
+**Problema:**
+Se instanciaba un logger manual y se logueaba PII en el mensaje de error.
+
+**Solucion:**
+Se uso `@Log` y se registro un mensaje generico sin datos sensibles.
+
+## Regla 2 - Violacion 10
+
+**Archivo:**
+LoginHandler.java
+
+**Problema:**
+Se logueaba el email del usuario al fallar el login (PII).
+
+**Solucion:**
+Se dejo un log generico sin datos personales.
+
+## Regla 2 - Violacion 11
+
+**Archivo:**
+CreateUserCommand.java
+
+**Problema:**
+Se usaba `@Builder` en un record, lo que es redundante.
+
+**Solucion:**
+Se removio `@Builder` y se uso el constructor canonico del record.
+
+## Regla 2 - Violacion 12
+
+**Archivo:**
+GetUserByIdQuery.java
+
+**Problema:**
+Se usaba `@Builder` en un record y un mensaje custom en la constraint.
+
+**Solucion:**
+Se elimino `@Builder` y se dejo el mensaje por defecto de `@NotBlank`.
+
+## Regla 2 - Violacion 13
+
+**Archivo:**
+GetUserByIdService.java
+
+**Problema:**
+Se declaraba `@Valid` en la implementacion en vez de en el puerto.
+
+**Solucion:**
+Se elimino `@Valid` del metodo implementado.
+
+## Regla 2 - Violacion 14
+
+**Archivo:**
+ValidatorProvider.java
+
+**Problema:**
+Clase utilitaria sin `@UtilityClass`.
+
+**Solucion:**
+Se anoto con `@UtilityClass`.
+
+## Regla 2 - Violacion 15
+
+**Archivo:**
+DatabaseConnectionFactory.java
+
+**Problema:**
+Clase utilitaria sin `@UtilityClass` y metodo no estatico.
+
+**Solucion:**
+Se anoto con `@UtilityClass` y se declaro el metodo como estatico.
+
+## Regla 2 - Violacion 16
+
+**Archivo:**
+DependencyContainer.java
+
+**Problema:**
+Se instanciaba `DatabaseConnectionFactory` en lugar de usar metodo estatico.
+
+**Solucion:**
+Se uso `DatabaseConnectionFactory.createConnection(...)`.
+
+## Regla 2 - Violacion 17
+
+**Archivo:**
+UserPersistenceMapper.java
+
+**Problema:**
+Clase de mapeo sin `@UtilityClass` y metodos de instancia innecesarios.
+
+**Solucion:**
+Se anoto con `@UtilityClass` y se hicieron estaticos los metodos.
+
+## Regla 2 - Violacion 18
+
+**Archivo:**
+UserRepositoryMySQL.java
+
+**Problema:**
+Se instanciaba el mapper en lugar de usar metodos estaticos.
+
+**Solucion:**
+Se llamo a los metodos estaticos de `UserPersistenceMapper`.
+
+## Regla 2 - Violacion 19
+
+**Archivo:**
+DatabaseConnectionFactoryTest.java
+
+**Problema:**
+Se instanciaba el factory en tests aunque es utilitario.
+
+**Solucion:**
+Se uso el metodo estatico en los tests.
+
+## Regla 2 - Violacion 20
+
+**Archivo:**
+UserPersistenceMapperTest.java
+
+**Problema:**
+Se instanciaba el mapper en tests aunque es utilitario.
+
+**Solucion:**
+Se usaron los metodos estaticos del mapper.
+
+## Regla 2 - Violacion 21
+
+**Archivo:**
+LoginService.java
+
+**Problema:**
+Metodo con multiples responsabilidades y condicion de estado redundante.
+
+**Solucion:**
+Se dividio en metodos de validacion y se simplifico la verificacion de estado.
+
+## Regla 2 - Violacion 22
+
+**Archivo:**
+UserModel.java
+
+**Problema:**
+El dominio dependia de una entidad de infraestructura.
+
+**Solucion:**
+Se elimino la conversion a entidad de persistencia desde el dominio.
+
+## Regla 2 - Violacion 23
+
+**Archivo:**
+EmailSenderException.java
+
+**Problema:**
+Constructores publicos que permitian crear excepciones con mensajes arbitrarios.
+
+**Solucion:**
+Se hicieron privados los constructores y se conservaron los factory methods.
