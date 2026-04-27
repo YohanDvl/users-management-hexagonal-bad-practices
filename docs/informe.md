@@ -225,3 +225,14 @@ Se logueaba PII (el email del usuario) en el dominio.
 
 **Solucion:**
 Se elimino el log de validacion del email.
+
+## Regla 1 - Violacion 16
+
+**Archivo:**
+UpdateUserHandler.java
+
+**Problema:**
+Se usaban abreviaturas en variables locales (`pw`, `upd`).
+
+**Solucion:**
+Se renombraron las variables a nombres descriptivos.
