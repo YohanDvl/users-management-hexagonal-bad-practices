@@ -181,3 +181,25 @@ Textos hardcodeados en metodos en lugar de constantes.
 
 **Solucion:**
 Se agregaron constantes y se reutilizaron en los mensajes.
+
+## Regla 1 - Violacion 12
+
+**Archivo:**
+UserController.java
+
+**Problema:**
+Se usaba una abreviatura (`usrs`) en una variable local.
+
+**Solucion:**
+Se renombro la variable a `users`.
+
+## Regla 1 - Violacion 13
+
+**Archivo:**
+UserController.java
+
+**Problema:**
+El entrypoint construia commands directamente sin usar el mapper.
+
+**Solucion:**
+Se usaron metodos de `UserDesktopMapper` para construir los commands.
