@@ -159,3 +159,25 @@ Se usaban comparaciones directas con `null` y nombres abreviados (`props`, `val`
 
 **Solucion:**
 Se uso `Objects.requireNonNull(...)` y se renombraron variables a nombres descriptivos.
+
+## Regla 1 - Violacion 11
+
+**Archivo:**
+ConsoleIO.java
+
+**Problema:**
+Se usaban nombres abreviados en variables locales.
+
+**Solucion:**
+Se renombraron variables a nombres descriptivos (`value`, `rawInput`).
+
+## Regla 2 - Violacion 6
+
+**Archivo:**
+ConsoleIO.java
+
+**Problema:**
+Textos hardcodeados en metodos en lugar de constantes.
+
+**Solucion:**
+Se agregaron constantes y se reutilizaron en los mensajes.
