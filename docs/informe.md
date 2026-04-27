@@ -236,3 +236,14 @@ Se usaban abreviaturas en variables locales (`pw`, `upd`).
 
 **Solucion:**
 Se renombraron las variables a nombres descriptivos.
+
+## Regla 1 - Violacion 17
+
+**Archivo:**
+CreateUserServiceTest.java
+
+**Problema:**
+Faltaban `@DisplayName`, comentarios AAA y se usaban aserciones poco expresivas.
+
+**Solucion:**
+Se agregaron `@DisplayName`, comentarios `// Arrange`, `// Act`, `// Assert` y se usaron aserciones correctas.
