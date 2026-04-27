@@ -269,3 +269,212 @@ Faltaban comentarios AAA, @DisplayName y se usaban aserciones poco expresivas.
 
 **Solucion:**
 Se agregaron comentarios `// Arrange`, `// Act`, `// Assert`, `@DisplayName` y se usaron aserciones correctas.
+
+## Regla 1 - Violacion 20
+
+**Archivo:**
+ConfigurationException.java
+
+**Problema:**
+Mensaje de error hardcodeado en el metodo factory.
+
+**Solucion:**
+Se definio una constante para el mensaje.
+
+## Regla 1 - Violacion 21
+
+**Archivo:**
+PersistenceException.java
+
+**Problema:**
+Mensajes de error hardcodeados en metodos factory.
+
+**Solucion:**
+Se definieron constantes y se usaron en los format.
+
+## Regla 1 - Violacion 22
+
+**Archivo:**
+EmailSenderException.java
+
+**Problema:**
+Mensajes hardcodeados en los metodos factory.
+
+**Solucion:**
+Se movieron a constantes descriptivas.
+
+## Regla 1 - Violacion 23
+
+**Archivo:**
+InvalidCredentialsException.java
+
+**Problema:**
+Mensajes hardcodeados en los metodos factory.
+
+**Solucion:**
+Se definieron constantes para los mensajes.
+
+## Regla 1 - Violacion 24
+
+**Archivo:**
+InvalidUserIdException.java
+
+**Problema:**
+Mensaje hardcodeado en el metodo factory.
+
+**Solucion:**
+Se creo una constante con el mensaje.
+
+## Regla 1 - Violacion 25
+
+**Archivo:**
+InvalidUserEmailException.java
+
+**Problema:**
+Mensajes hardcodeados en los metodos factory.
+
+**Solucion:**
+Se definieron constantes y se usaron en format.
+
+## Regla 1 - Violacion 26
+
+**Archivo:**
+InvalidUserRoleException.java
+
+**Problema:**
+Mensaje hardcodeado en el metodo factory.
+
+**Solucion:**
+Se definio una constante para el mensaje.
+
+## Regla 1 - Violacion 27
+
+**Archivo:**
+InvalidUserStatusException.java
+
+**Problema:**
+Mensaje hardcodeado en el metodo factory.
+
+**Solucion:**
+Se definio una constante para el mensaje.
+
+## Regla 1 - Violacion 28
+
+**Archivo:**
+InvalidUserNameException.java
+
+**Problema:**
+Mensajes hardcodeados en los metodos factory.
+
+**Solucion:**
+Se definieron constantes para los mensajes.
+
+## Regla 1 - Violacion 29
+
+**Archivo:**
+UserAlreadyExistsException.java
+
+**Problema:**
+Mensaje hardcodeado en el metodo factory.
+
+**Solucion:**
+Se definio una constante y se uso en format.
+
+## Regla 1 - Violacion 30
+
+**Archivo:**
+UserNotFoundException.java
+
+**Problema:**
+Mensaje hardcodeado en el metodo factory.
+
+**Solucion:**
+Se definio una constante y se uso en format.
+
+## Regla 1 - Violacion 31
+
+**Archivo:**
+UserManagementCli.java
+
+**Problema:**
+Uso de literal repetido y nombre abreviado en el menu.
+
+**Solucion:**
+Se reutilizo la constante y se renombro la variable a `option`.
+
+## Regla 1 - Violacion 32
+
+**Archivo:**
+UserNameTest.java
+
+**Problema:**
+Faltaban `@DisplayName`, comentarios AAA y se usaban aserciones poco expresivas.
+
+**Solucion:**
+Se agregaron `@DisplayName`, comentarios `// Arrange`, `// Act`, `// Assert` y se usaron aserciones correctas.
+
+## Regla 1 - Violacion 33
+
+**Archivo:**
+UserIdTest.java
+
+**Problema:**
+Faltaban `@DisplayName`, comentarios AAA y se usaban aserciones poco expresivas.
+
+**Solucion:**
+Se agregaron `@DisplayName`, comentarios `// Arrange`, `// Act`, `// Assert` y se usaron aserciones correctas.
+
+## Regla 1 - Violacion 34
+
+**Archivo:**
+GetUserByIdServiceTest.java
+
+**Problema:**
+Faltaban comentarios AAA, @DisplayName y se usaban aserciones poco expresivas.
+
+**Solucion:**
+Se agregaron comentarios `// Arrange`, `// Act`, `// Assert`, `@DisplayName` y se usaron aserciones correctas.
+
+## Regla 1 - Violacion 35
+
+**Archivo:**
+GetAllUsersServiceTest.java
+
+**Problema:**
+Faltaban comentarios AAA, javadoc y se usaban aserciones poco expresivas.
+
+**Solucion:**
+Se agrego javadoc, comentarios `// Arrange`, `// Act`, `// Assert` y se usaron aserciones correctas.
+
+## Regla 1 - Violacion 36
+
+**Archivo:**
+EmailNotificationServiceTest.java
+
+**Problema:**
+Faltaban javadoc, @DisplayName y comentarios AAA.
+
+**Solucion:**
+Se agregaron javadoc, `@DisplayName` y comentarios AAA.
+
+## Regla 1 - Violacion 37
+
+**Archivo:**
+DatabaseConnectionFactoryTest.java
+
+**Problema:**
+Faltaba javadoc de clase.
+
+**Solucion:**
+Se agrego javadoc descriptivo.
+
+## Regla 1 - Violacion 38
+
+**Archivo:**
+UserPersistenceMapperTest.java
+
+**Problema:**
+Faltaba javadoc de clase.
+
+**Solucion:**
+Se agrego javadoc descriptivo.
