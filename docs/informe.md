@@ -104,3 +104,14 @@ Se usaba el valor magico `3` para longitud minima del nombre.
 
 **Solucion:**
 Se creo la constante `MINIMUM_LENGTH` y se uso en la validacion.
+
+## Regla 1 - Violacion 8
+
+**Archivo:**
+UserId.java
+
+**Problema:**
+Se validaba null con comparacion directa en lugar de `Objects.requireNonNull`.
+
+**Solucion:**
+Se reemplazo el chequeo por `Objects.requireNonNull(...)`.
