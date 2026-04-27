@@ -148,3 +148,14 @@ Faltaban `@DisplayName`, comentarios AAA y se usaban aserciones poco expresivas.
 
 **Solucion:**
 Se agregaron `@DisplayName`, comentarios `// Arrange`, `// Act`, `// Assert` y se usaron aserciones correctas.
+
+## Regla 1 - Violacion 10
+
+**Archivo:**
+AppProperties.java
+
+**Problema:**
+Se usaban comparaciones directas con `null` y nombres abreviados (`props`, `val`).
+
+**Solucion:**
+Se uso `Objects.requireNonNull(...)` y se renombraron variables a nombres descriptivos.
