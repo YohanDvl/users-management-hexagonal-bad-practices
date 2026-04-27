@@ -203,3 +203,25 @@ El entrypoint construia commands directamente sin usar el mapper.
 
 **Solucion:**
 Se usaron metodos de `UserDesktopMapper` para construir los commands.
+
+## Regla 1 - Violacion 14
+
+**Archivo:**
+UserEmail.java
+
+**Problema:**
+Se usaba logging dentro del dominio.
+
+**Solucion:**
+Se elimino el logger de la clase.
+
+## Regla 1 - Violacion 15
+
+**Archivo:**
+UserEmail.java
+
+**Problema:**
+Se logueaba PII (el email del usuario) en el dominio.
+
+**Solucion:**
+Se elimino el log de validacion del email.
