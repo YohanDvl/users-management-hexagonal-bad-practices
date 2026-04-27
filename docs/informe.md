@@ -115,3 +115,25 @@ Se validaba null con comparacion directa en lugar de `Objects.requireNonNull`.
 
 **Solucion:**
 Se reemplazo el chequeo por `Objects.requireNonNull(...)`.
+
+## Regla 1 - Violacion 9
+
+**Archivo:**
+EmailDestinationModel.java
+
+**Problema:**
+Se validaba null con comparacion directa en lugar de `Objects.requireNonNull`.
+
+**Solucion:**
+Se reemplazo el chequeo por `Objects.requireNonNull(...)`.
+
+## Regla 2 - Violacion 4
+
+**Archivo:**
+EmailDestinationModel.java
+
+**Problema:**
+Los mensajes de error estaban hardcodeados en el metodo.
+
+**Solucion:**
+Se definieron constantes con nombres descriptivos para los mensajes.
